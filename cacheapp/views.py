@@ -27,3 +27,9 @@ def my_view(request):
     print('第' + str(count) + '次调用my_view函数')
     cakes = Cake.objects.all()
     return render(request, 'cakes.html', {'cakes': cakes, 'msg': '第' + str(count) + '次调用my_view函数'})
+
+
+def cake_views(request):
+    print('调用cake_view函数')
+    cakes = Cake.objects.all()
+    return render(request, 'cakes.html', {'cakes': cakes})

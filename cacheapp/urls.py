@@ -1,9 +1,10 @@
 from django.urls import path
 
-from cacheapp import views
+from cacheapp.views import *
 
 urlpatterns = [
-    path('cake/<cake_id>/',views.get_cake),
-    path('cakes/',views.my_view),
-    path('all/',views.my_view)
+    path('cake/<cake_id>/', get_cake),
+    path('cakes/', my_view),
+    path('all/', my_view),
+    path('allcake/', cache_page(60 * 15)(cake_views)),
 ]
