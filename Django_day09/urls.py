@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('homeworkapp/', include('homeworkapp.urls', namespace='homework')),
     path('cacheapp/', include('cacheapp.urls')),
+    path('formapp/',include('formapp.urls')),
 ]
